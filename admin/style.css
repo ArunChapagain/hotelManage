@@ -1,0 +1,38 @@
+* {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .h-font {
+    font-family: 'Merienda', cursive;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  margin: 0;
+}
+.pop:hover{
+  transform: scale(1.03);
+  transition: all;
+}
+.details{
+  background-color: rgb(232, 217, 188);
+}
+.navbar-toggler{
+margin: right 1px;
+}
+.swiper-slide,.container-fluid_swiper
+{
+height: 485px;
+}
+.custom-alert{
+  position: fixed;
+  top: 25px;
+  right:25px;
+
+}
+#dashboard-menu{
+position: fixed;
+height: 100%;
+
+}
+
