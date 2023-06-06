@@ -1,3 +1,4 @@
+
 <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light px-  lg-3 py-lg-2 shadow-sm sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand me-5" href="dashboard.php">
@@ -29,6 +30,9 @@
         <li class="nav-item">
           <a class="nav-link me-2" href="features&facilities.php">Features & Facilities</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link me-2" href="users.php">User settings</a>
+        </li>
       </ul>
       <a type="button" class="btn btn-dark shadow-none me-lg-3 me-2 pop" href="logout.php">
         Logout
@@ -36,4 +40,4 @@
     </div>
   </div>
 </nav>
-<?php require('inc/scripts.php');?>
+<?php require('inc/scripts.php'); ?>

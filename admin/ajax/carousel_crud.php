@@ -8,17 +8,14 @@ if (isset($_POST['add_image'])) {
     $img_r = uploadImage($_FILES['picture'], CAROUSEL_FOLDER);
 
     if ($img_r == 'inv_img') {
-        // alert('error',$img_r);
-        echo $img_r;
+        echo $img_r; 
         
     }
      else if ($img_r == 'inv_size') {
-        // alert('error',$img_r);
         echo $img_r;
 
     }   
     else if ($img_r == 'upd_failed') {
-        // alert('error',$img_r);
         echo $img_r;
 
     }
@@ -44,16 +41,15 @@ if(isset($_POST['get_carousel']))
                 <div class="card bg-dark text-white">
                     <img src="$path$row[image]" class="card-img">
                         <div class="card-img-overlay text-end">
-                        <button type="button" onclick="rem_image($row[Img_no])" class="btn btn-danger btn-sm shadow-none">
+                        <button type="button" onclick="rem_image($row[Img_no])" class="btn btn-danger btn-sm shadow-none pop">
                         <i class="bi bi-trash"></i> Delete
                         </button>
                     </div>
                 </div>
             </div>
         data;
-            
-
     }
+    
 }
 
 
@@ -69,7 +65,7 @@ if(isset($_POST['rem_image']))
 
     if(deleteImage($img['image'],CAROUSEL_FOLDER))
     {
-        $q = "DELETE FROM `carousel` WHERE `Img_no`=?";
+        $q = "DELETE FROM `carousel` WHERE `Img_no`=? ";
         $res=deleteData($q,$values,'i');
         echo $res;
     }
