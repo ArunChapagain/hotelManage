@@ -20,6 +20,7 @@ adminLogin();
         This is a Dash board.
     </div>
 
+<?php require('inc/scripts.php'); ?>
 </body>
 
 </html>

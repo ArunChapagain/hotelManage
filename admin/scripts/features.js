@@ -1,5 +1,6 @@
 
 let carousel_s_form = document.getElementById('carousel_s_form');
+let member_name_inp = document.getElementById('member_name_inp');
 let carousel_picture_inp = document.getElementById('carousel_picture_inp');
 
 carousel_s_form.addEventListener('submit', function (e) {
@@ -7,13 +8,21 @@ carousel_s_form.addEventListener('submit', function (e) {
     add_image();
 });
 
+// carousel_s_form.addEventListener('submit', function (e) {
+//     e.preventDefault();
+//     add_image();
+// });
+
 function add_image() {
     let data = new FormData();
+    // data.append('name', carousel_name_inp.value);
     data.append('picture', carousel_picture_inp.files[0]);
     data.append('add_image', '');
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "ajax/carousel_crud.php", true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
 
 
     xhr.onload = function () {
@@ -31,7 +40,7 @@ function add_image() {
             alert('error', 'Image upload failed.Server Down');
         }
         else {
-            // alert('Success', 'New Image added');
+            alert('Success', 'New Image added');
             carousel_picture_inp.value = '';
             get_carousel();
         }

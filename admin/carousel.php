@@ -33,7 +33,7 @@ adminLogin();
                         </button>
                     </div>
 
-                    <div class="row my-3" id="carousel-data">
+                    <div class="row" id="carousel-data">
                     </div>
                 </div>
             </div>
@@ -54,23 +54,24 @@ adminLogin();
                     </div>
                     <div class="modal-body" style="color:black;">
                         <div class="mb-3">
+                            <!-- may conatin error accept=".jpg, .png, .webp, .jpeg"  -->
                             <label class="form-label">Picture</label>
-                            <input type="file" name="carousel_picture" id="carousel_picture_inp"
+                            <input type="file" name="carousel_picture"  id="carousel_picture_inp"
                                 class="form-control shadow-none" required>
+                            <!--  -->
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" onclick="carousel_picture.value=''"
                             class="btn btn-sm btn-outline-dark shadow-none" data-bs-dismiss="modal">Cancel</button>
-                        <button type="submit" name="add_image" class="btn btn-dark shadow-none pop">Add</button>
+                        <button  type="submit" class="btn btn-dark shadow-none pop">Add</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
+    
     <script src="./scripts/carousel.js"></script>
-
 
 
 
