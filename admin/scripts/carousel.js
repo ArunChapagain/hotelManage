@@ -31,7 +31,7 @@ function add_image() {
             alert('error', 'Image upload failed.Server Down');
         }
         else {
-            // alert('Success', 'New Image added');
+            alert('Success', 'New Image added');
             carousel_picture_inp.value = '';
             get_carousel();
         }
@@ -43,7 +43,7 @@ function add_image() {
 function get_carousel() {
 
     let xhr = new XMLHttpRequest();
-    xhr.open("POST","ajax/carousel_crud.php", true);
+    xhr.open("POST", "ajax/carousel_crud.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onload = function () {
@@ -56,10 +56,12 @@ function get_carousel() {
 
 function rem_image(val) {
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "ajax/carousel_crud.php");
+    xhr.open("POST", "ajax/carousel_crud.php", true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
 
     xhr.onload = function () {
-        if (this.responseText == 1) {
+        if (this.responseText) {
             alert('success', 'Image removed!');
             get_carousel();
         }
