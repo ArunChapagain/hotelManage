@@ -15,30 +15,39 @@
 <body class="bg-light">
 
   <?php require('inc/header.php'); ?>
+  <?php
 
-
-  <div class="my-5 px-5 pb-5">
+  if (!(isset($_SESSION['login']) && $_SESSION['login'] == true)) {
+    alert('alert', 'please login');
+    echo ' <div class="my-5 px-5 pb-5">
     <h2 class="fw-bold h-font text-center">
       Bookings
     </h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reiciendis facilis vero perspiciatis delectus aperiam commodi tempore, nobis alias nemo, neque deserunt? Assumenda necessitatibus fugiat quas molestias autem tenetur cum.</p>
-  </div>
-
-  <?php
-  if (!(isset($_SESSION['login']) && $_SESSION['login'] == true)) {
-    alert('alert', 'please login');
-    echo '<h4 class="my-5 py-5 text-center">No rooms to show</h4>';
+  </div>';
+    echo <<<chrome
+      <div class=" text-center">
+    <span class="badge rounded-pill bg-white text-dark text-wrap mb-1">
+    <h2 class="my-5">No Bookings to show</h2>
+    </span>
+      </div>
+    chrome;
   } else {
+    echo ' <div class="my-5 px-5 pb-5">
+  <h2 class="fw-bold h-font text-center">
+    Bookings
+  </h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reiciendis facilis vero perspiciatis delectus aperiam commodi tempore, nobis alias nemo, neque deserunt? Assumenda necessitatibus fugiat quas molestias autem tenetur cum.</p>
+</div>';
     $id = $_SESSION['uId'];
     $trans = select("SELECT * FROM `transactions` WHERE `cus_id`=?;", [$id], 'i');
-
     if (mysqli_num_rows($trans) == 0) {
-      print_r($trans);
       echo <<<data
-      <div>
-
-      <span class="badge rounded-pill bg-light text-dark text-wrap mb-1">No Bookings to show</span>
-      </div>
+      <div class=" text-center">
+      <span class="badge rounded-pill bg-white text-dark text-wrap mb-1">
+      <h2 class="my-5">No Bookings to show</h2>
+      </span>
+        </div>
       data;
     } else {
 
@@ -92,7 +101,8 @@
           </div>
 
       <?php }
-  } ?>
+  }
+      ?>
 
       <!-- footer -->
       <?php require('inc/footer.php');
