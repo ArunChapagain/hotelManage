@@ -14,7 +14,7 @@ $type=$_SESSION['room']['type'];
 $roomID = $_SESSION['room']['id'];
 
 
-$currency = "usd";
+$currency = "NPR";
 $roomPrice = ($_SESSION['payment']);
 $days = ($_SESSION['days']);
 $cin_date = ($_SESSION['checkin']);
