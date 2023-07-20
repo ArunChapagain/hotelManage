@@ -59,7 +59,7 @@ if (isset($_SESSION['adminLogin']) && $_SESSION['adminLogin'] == true) {
       session_start();
       $_SESSION['adminLogin']=true;
       $_SESSION['adminId']=$row['sr_no'];
-      redirect('dashboard.php');
+      redirect('rooms.php');
     } else {
       alert('error','Invalid Admin name or password.');
     }

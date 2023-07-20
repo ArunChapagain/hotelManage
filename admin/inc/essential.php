@@ -6,7 +6,7 @@ define('CAROUSEL_IMG_PATH',SITE_URL.'images/carousel/');
 define('ICONS_IMG_PATH',SITE_URL.'images/icons/');
 define('ROOMS_IMG_PATH',SITE_URL.'images/rooms/');
 define('USERS_IMG_PATH',SITE_URL.'images/users/');
-define('COMP_NAME','YOYO');
+define('COMP_NAME','BOOKIN');
 
 
 // backend upload  
