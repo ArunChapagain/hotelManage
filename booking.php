@@ -23,7 +23,7 @@
     <h2 class="fw-bold h-font text-center">
       Bookings
     </h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reiciendis facilis vero perspiciatis delectus aperiam commodi tempore, nobis alias nemo, neque deserunt? Assumenda necessitatibus fugiat quas molestias autem tenetur cum.</p>
+    <p></p>
   </div>';
     echo <<<chrome
       <div class=" text-center">
@@ -37,7 +37,6 @@
   <h2 class="fw-bold h-font text-center">
     Bookings
   </h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reiciendis facilis vero perspiciatis delectus aperiam commodi tempore, nobis alias nemo, neque deserunt? Assumenda necessitatibus fugiat quas molestias autem tenetur cum.</p>
 </div>';
     $id = $_SESSION['uId'];
     $trans = select("SELECT * FROM `transactions` WHERE `cus_id`=?;", [$id], 'i');
@@ -63,8 +62,8 @@
 
           <div class="container ">
             <div class="row">
-              <div class="col-lg-6 col-md-12 px-4">
-                <div class="card my-4 text-middle border-0 shadow rounded-3">
+              <div class="col-md-12 px-4">
+                <div class="card my-4 px-5 py-5 text-middle border-0 shadow rounded-3">
                   <div class="card-body">
                 <?php
                 $date = date("d-m-y", strtotime($tdata['created']));
@@ -78,6 +77,7 @@
                 <h4>Booking status </h4>
                 $status
               </div>
+              </div>
               <div>
                 Hotel Name : $rdata[name] <br>
                 Room ID : $rdata[id] <br>
@@ -89,6 +89,8 @@
                 Paid Amount : NRs.$tdata[paid_amount] <br>
                 Transaction ID : $tdata[txn_id] <br>
                 Booked in : $date<br>
+              </div>
+              </div>
               </div>
               result;
               }
