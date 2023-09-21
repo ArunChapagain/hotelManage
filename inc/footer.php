@@ -5,7 +5,7 @@
         <?php echo COMP_NAME ?>
       </h3>
       <p>
-      At YOYO, we strive to provide you with the ultimate hotel booking experience. Whether you're planning a business trip, a family vacation, or a romantic getaway, we are here to make your travel dreams a reality. Our platform is designed to connect you with a vast selection of hotels, ensuring that you find the perfect accommodation that meets your needs and budget.
+      At BookIn, we strive to provide you with the ultimate hotel booking experience. Whether you're planning a business trip, a family vacation, or a romantic getaway, we are here to make your travel dreams a reality. Our platform is designed to connect you with a vast selection of hotels, ensuring that you find the perfect accommodation that meets your needs and budget.
       </p>
     </div>
     <div class="col-lg-4 p-3 d-flex align-item-center justify-content-around">

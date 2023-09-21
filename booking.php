@@ -23,9 +23,10 @@
     <h2 class="fw-bold h-font text-center">
       Bookings
     </h2>
-    <p></p>
+    
   </div>';
     echo <<<chrome
+    
       <div class=" text-center">
     <span class="badge rounded-pill bg-white text-dark text-wrap mb-1">
     <h2 class="my-5">No Bookings to show</h2>
@@ -39,13 +40,15 @@
   </h2>
 </div>';
     $id = $_SESSION['uId'];
-    $trans = select("SELECT * FROM `transactions` WHERE `cus_id`=?;", [$id], 'i');
+    $trans = select("SELECT * FROM `transactions` WHERE `cus_id`=? AND `removed`=0;", [$id], 'i');
     if (mysqli_num_rows($trans) == 0) {
       echo <<<data
       <div class=" text-center">
       <span class="badge rounded-pill bg-white text-dark text-wrap mb-1">
       <h2 class="my-5">No Bookings to show</h2>
       </span>
+        </div>
+      <div class="container text-center py-5">
         </div>
       data;
     } else {
