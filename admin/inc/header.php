@@ -7,7 +7,7 @@
         <?php echo COMP_NAME ?>
         </div>
         <div class="fw-bold fs-2 mx-5">
-          Admin Panal
+          Admin Panel
         </div>
       </div>
     </a>
