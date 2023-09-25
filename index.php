@@ -55,9 +55,9 @@
   <div class="container">
     <div class="row">
       <?php
-
-      $room_res = select("SELECT * FROM `rooms` WHERE `status`=? AND `removed`=?", [1, 0], 'ii');
-
+      $room_res = selectAll('rooms');
+      //
+      // $room_res = select("SELECT * FROM `rooms` WHERE `status`=? AND `removed`=?", [1, 0], 'ii');
       while ($row = mysqli_fetch_assoc($room_res)) {
         // get features of room
         $fea_q = mysqli_query($con, "SELECT f.name FROM `features` f 
