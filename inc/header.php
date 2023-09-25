@@ -16,7 +16,7 @@ require('links.php');
           <a href="index.php" type="button" class="btn btn-outline-dark shadow-none  me-3"><i class="bi bi-house-fill"></i> Home</a>
         </li>
         <li class="nav-item me-2">
-          <a href="rooms.php" type="button" class="btn btn-outline-dark shadow-none  me-3 "><i class="bi bi-hospital"></i> Rooms</a>
+          <a href="rooms.php" type="button" class="btn btn-outline-dark shadow-none  me-3 "><i class="bi bi-hospital"></i> Hotels</a>
         </li>
         <li class="nav-item me-2">
           <a href="facilities.php" type="button " class="btn btn-outline-dark shadow-none  me-3 "><i class="bi bi-router"></i> Facilities</a>

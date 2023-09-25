@@ -18,7 +18,7 @@
   <?php require('inc/header.php'); ?>
 
   <div class="my-5" px-4>
-    <h2 class="fw-bold h-font text-center">Our Rooms</h2>
+    <h2 class="fw-bold h-font text-center">Our Hotels</h2>
   </div>
 
   <div>

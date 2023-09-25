@@ -51,7 +51,7 @@
   </div>
 
   <!-- our rooms -->
-  <h2 class="mt-5 pt-4 mb-4 text-center h-font">OUR ROOMS</h2>
+  <h2 class="mt-5 pt-4 mb-4 text-center h-font">OUR HOTELS</h2>
   <div class="container">
     <div class="row">
       <?php
